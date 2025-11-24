@@ -8,7 +8,6 @@ const NODE_ENV = process.env.NODE_ENV || "development";
 
 const server = http.createServer(app);
 
-
 server.listen(PORT, async () => {
   console.log(
     `Server running in ${NODE_ENV} mode on http://localhost:${PORT}`
