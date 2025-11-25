@@ -8,11 +8,12 @@ const NODE_ENV = process.env.NODE_ENV || "development";
 
 const server = http.createServer(app);
 
-server.listen(PORT, async () => {
+server.listen(PORT, "0.0.0.0", async () => {
   console.log(
-    `Server running in ${NODE_ENV} mode on http://localhost:${PORT}`
+    `Server running in ${NODE_ENV} mode on http://0.0.0.0:${PORT}`
   );
 });
+
 
 process.on("unhandledRejection", (err) => {
   console.error("UNHANDLED REJECTION!  Shutting down...");
