@@ -1,5 +1,6 @@
 import express from "express";
 import { config } from "dotenv";
+import { linearSearch } from "./moduling/searching.js";
 
 config();
 
@@ -21,6 +22,8 @@ app.all(/.*/, (_req, res) => {
     });
 });
 
+
+console.log(linearSearch([1,2,3,4,5], 3)); // 2
 
 app.use((err, _req, res, _next) => {
     const statusCode = err.statusCode || 500;
